@@ -1,0 +1,24 @@
+RewriteEngine on
+
+#seo url oluşturma
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+#seo url linklerndirme
+RewriteRule ^mansetler-([0-9a-zA-Z-_]+) sliders_detail.php?sliders_id=$1 [L,QSA]
+RewriteRule ^haberler-([0-9a-zA-Z-_]+) news_detail.php?blogs_id=$1 [L,QSA]
+RewriteRule ^kategorihaber-([0-9a-zA-Z-_]+) news_detail.php?blogs_id=$1 [L,QSA]
+RewriteRule ^onecikanhaber-([0-9a-zA-Z-_]+) news_detail.php?blogs_id=$1 [L,QSA]
+RewriteRule ^videohaber-([0-9a-zA-Z-_]+) video_detay.php?videos_id=$1 [L,QSA]
+RewriteRule ^editor-([0-9a-zA-Z-_]+) author.php?admins_id=$1 [L,QSA]
+RewriteRule ^kategori-([0-9a-zA-Z-_]+) category.php?kategori_id=$1 [L,QSA]
+
+
+
+
+
+
+
+#RewriteRule ^bloglarid/([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+) blog-details1.php?blogs_slug=$1&blogs_id=$2 [L,QSA]
